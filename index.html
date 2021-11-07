@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alpha Shop</title>
+  <link rel="stylesheet" href="src/output.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/1957e74212.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <header>
+    <div class="brand"><img class="brand-logo" src="https://i.ibb.co/K5LF2x5/Alpha-logo.png" alt="">
+      <a href="#"><span class="brand-title">Alpha Shop</span></a>
+    </div>
+    <div class="hamburger"><a href="" class="hamburger-icon"><i class="fas fa-bars"></i></a></div>
+    <div class="icon-group">
+      <a class="search-icon" href="#"><i class="fas fa-search"></i></a>
+      <a class="cart-icon" href="#"><i class="fas fa-shopping-cart"></i></a>
+      <a class="moon-icon" href="#"><i class="far fa-moon"></i></a>
+    </div>
+    <nav class="menu">
+      <ul>
+        <li><a href="#">男款</a></li>
+        <li><a href="#">女款</a></li>
+        <li><a href="#">最新消息</a></li>
+        <li><a href="#">客製商品</a></li>
+        <li><a href="#">聯絡我們</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="billing-container">
+      <h3 class="billing-title">結帳</h3>
+      <div class="billing-stepper">
+        <div class="step active">
+          <div class="circle-container"></div>
+          <div class="label-container">寄送地址</div>
+        </div>
+        <div class="step">
+          <div class="circle-container"></div>
+          <span class="connect-line"></span>
+          <div class="label-container">運送方式</div>
+        </div>
+        <div class="step">
+          <div class="circle-container"></div>
+          <span class="connect-line"></span>
+          <div class="label-container">付款資訊</div>
+        </div>
+      </div>
+      <div class="billing-info">
+        <div class="form-container part-a">
+          <h3 class="billing-title">寄送地址</h3>
+          <div class="gender-container">
+            <label for="">稱謂</label>
+            <br>
+            <select name="gender" id="">
+              <option value="male" selected>先生</option>
+              <option value="female">小姐</option>
+            </select>
+          </div>
+          <div class="name-container">
+            <label for="name">姓名</label>
+            <br>
+            <input id="name" type="text" name="name" placeholder="請輸入姓名" required>
+            <span class="tick"></span>
+          </div>
+          <div class="phone-container">
+            <label for="phone">電話</label>
+            <br>
+            <input id="phone" type="text" name="phone" placeholder="請輸入行動電話" pattern="[0-9]{8,10}" required>
+            <span class="tick"></span>
+          </div>
+          <div class="email-container">
+            <label for="email">Email</label>
+            <br>
+            <input id="email" type="email" name="email" placeholder="請輸入電子郵件" required>
+            <span class="tick"></span>
+          </div>
+
+          <div class="region-container">
+            <label for="region">縣市</label>
+            <br>
+            <select name="region" id="region">
+              <option value="">請選擇縣市</option>
+              <option value="Keelung">基隆市</option>
+              <option value="Taipei">台北市</option>
+              <option value="New Taipei">新北市</option>
+              <option value="Taoyuan">桃園市</option>
+              <option value="Taichung">臺中市</option>
+              <option value="Tainan">臺南市</option>
+              <option value="Kaohsiung">高雄市</option>
+              <option value="Ilan">宜蘭縣</option>
+            </select>
+          </div>
+          <div class="address-container">
+            <label for="address">地址</label>
+            <br>
+            <input id="address" type="address" name="address" placeholder="請輸入地址" required>
+            <span class="tick"></span>
+          </div>
+        </div>
+      </div>
+      <div class="billing-info d-none">
+        <div class="form-container part-b">
+          <h3 class="billing-title">運送方式</h3>
+          <div class="standard">
+            <input type="radio" name="shipping" value="0" id="shipping-standard">
+            <label for="shipping-standard"></label>
+            <span class="shipping-day">約3~7個工作天</span>
+            <span class="shipping-standard">標準運送</span>
+            <span class="shipping-free">免費</span>
+
+          </div>
+          <div class="express">
+            <input type="radio" name="shipping" value="500" id="shipping-express">
+            <label for="shipping-express"> </label>
+            <span class="shipping-day">48小時內送達</span>
+            <span class="shipping-standard">DHL貨運</span>
+            <span class="shipping-free">$500</span>
+
+          </div>
+        </div>
+      </div>
+      <div class="billing-info d-none">
+        <div class="form-container part-c">
+          <h3 class="billing-title">付款資訊</h3>
+          <div class="cardholder-container">
+            <label for="cardholder">持卡人姓名</label>
+            <br>
+            <input id="cardholder" type="text" placeholder="John Doe" name="cardholder" required>
+            <span class="tick"></span>
+          </div>
+          <div class="cardnumber-container">
+            <label for="cardnumber">卡號</label>
+            <br>
+            <input id="cardnumber" type="text" placeholder="1111 2222 3333 4444" name="cardnumber" pattern="[0-9]{16}"
+              required>
+            <span class="tick"></span>
+          </div>
+          <div class="expiry-date-container" required>
+            <label for="expiry-date">有效期限</label>
+            <br>
+            <input id="expiry-date" type="text" placeholder="MM/YY" name="expiry-date" required>
+            <span class="tick"></span>
+          </div>
+          <div class="cvc-container">
+            <label for="cvc">CVC/CCV</label>
+            <br>
+            <input id="cvc" type="text" placeholder="123" name="cvc" required>
+            <span class="tick"></span>
+          </div>
+        </div>
+      </div>
+      <div class="button-container active">
+        <button class="btn btn-outline d-none">← 上一步</button>
+        <button class="btn btn-primary active">下一步 →</button>
+      </div>
+    </section>
+    <section class="product-container">
+      <h3 class="product-title">購物籃</h3>
+      <div class="render-box">
+        <!--render-->
+      </div>
+      <div class="shipping-cost">
+        <span class="shipping-cost-title">運費</span>
+        <span class="shipping-cost-number">
+          <!--render cost-->
+        </span>
+      </div>
+      <div class="subtotal">
+        <span class="subtotal-title">小計</span>
+        <span class="subtotal-number">
+          <!--render price-->
+        </span>
+      </div>
+    </section>
+  </main>
+
+  <footer></footer>
+
+  <script src="app.js"></script>
+
+</body>
+
+</html>
